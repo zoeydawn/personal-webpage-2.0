@@ -1,3 +1,5 @@
+import { FaAdjust } from "react-icons/fa";
+
 const availableThemes = [
   "light",
   "dark",
@@ -10,24 +12,24 @@ const availableThemes = [
   "cyberpunk",
   "valentine",
   "halloween",
-//   "garden",
-//   "forest",
-//   "aqua",
-//   "lofi",
-//   "pastel",
-//   "fantasy",
-//   "wireframe",
-//   "black",
-//   "luxury",
-//   "dracula",
-//   "cmyk",
-//   "autumn",
-//   "business",
-//   "acid",
-//   "lemonade",
-//   "night",
-//   "coffee",
-//   "winter",
+  //   "garden",
+  //   "forest",
+  //   "aqua",
+  //   "lofi",
+  //   "pastel",
+  //   "fantasy",
+  //   "wireframe",
+  //   "black",
+  //   "luxury",
+  //   "dracula",
+  //   "cmyk",
+  //   "autumn",
+  //   "business",
+  //   "acid",
+  //   "lemonade",
+  //   "night",
+  //   "coffee",
+  //   "winter",
 ];
 
 type NavbarProps = {
@@ -41,8 +43,8 @@ const Navbar = ({ setTheme }: NavbarProps) => (
     </div>
 
     <div className="dropdown dropdown-end">
-      <label tabIndex={0} className="btn m-1">
-        Click
+      <label tabIndex={0} className="btn btn-circle btn-ghost m-1">
+        <FaAdjust/>
       </label>
 
       <ul tabIndex={0} className="dropdown-content menu p-2 w-52">

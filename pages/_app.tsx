@@ -5,6 +5,7 @@ import { useState } from 'react'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState('light')
+  // TODO: save theme to local storage
 
   return (
     <div data-theme={theme}>
