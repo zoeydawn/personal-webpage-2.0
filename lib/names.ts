@@ -1,2 +1,2 @@
-export const fullName = "Zoey Dawn"
-export const firstName = "Zoey"
+export const fullName = 'Zoey Dawn'
+export const firstName = 'Zoey'

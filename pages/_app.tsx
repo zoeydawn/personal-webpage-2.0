@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar'
 import { useState } from 'react'
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Navbar setTheme={setTheme} />
       <Component {...pageProps} />
     </div>
-  );
+  )
 }
 
 export default MyApp

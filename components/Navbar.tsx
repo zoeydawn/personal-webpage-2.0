@@ -1,20 +1,20 @@
-import Link from "next/link";
-import { FaAdjust } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { firstName } from "../lib/names";
+import Link from 'next/link'
+import { FaAdjust } from 'react-icons/fa'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { firstName } from '../lib/names'
 
 const availableThemes = [
-  "light",
-  "dark",
-  "cupcake",
+  'light',
+  'dark',
+  'cupcake',
   //   "bumblebee",
   //   "emerald",
   //   "corporate",
-  "synthwave",
-  "retro",
-  "cyberpunk",
-  "valentine",
-  "halloween",
+  'synthwave',
+  'retro',
+  'cyberpunk',
+  'valentine',
+  'halloween',
   //   "garden",
   //   "forest",
   //   "aqua",
@@ -33,19 +33,19 @@ const availableThemes = [
   //   "night",
   //   "coffee",
   //   "winter",
-];
+]
 
 const menuItems = [
-  { title: "About", href: "/" },
-  { title: "Experience", href: "/" },
-  { title: "Projects", href: "/" },
-  { title: "Contact", href: "/" },
-  { title: "Blog", href: "/" },
-];
+  { title: 'About', href: '/' },
+  { title: 'Experience', href: '/' },
+  { title: 'Projects', href: '/' },
+  { title: 'Contact', href: '/' },
+  { title: 'Blog', href: '/' },
+]
 
 type NavbarProps = {
-  setTheme: (value: string) => void;
-};
+  setTheme: (value: string) => void
+}
 
 const Navbar = ({ setTheme }: NavbarProps) => (
   <>
@@ -99,6 +99,6 @@ const Navbar = ({ setTheme }: NavbarProps) => (
       </div>
     </div>
   </>
-);
+)
 
-export default Navbar;
+export default Navbar
