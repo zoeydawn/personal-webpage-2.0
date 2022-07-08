@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import { FaAdjust } from 'react-icons/fa'
+import { FaAdjust, FaChevronDown } from 'react-icons/fa'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { importantSocialMediaLinks, socialMediaLinks } from '../lib/links'
 import { firstName } from '../lib/names'
 
 const availableThemes = [
@@ -56,8 +57,8 @@ const Navbar = ({ setTheme }: NavbarProps) => (
       <div className="drawer-side">
         <label htmlFor="my-drawer" className="drawer-overlay"></label>
         <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
-          {menuItems.map(({ title, href }) => (
-            <li>
+          {menuItems.map(({ title, href }, index) => (
+            <li key={index}>
               <Link href={href}>
                 <a>{title}</a>
               </Link>
@@ -79,8 +80,10 @@ const Navbar = ({ setTheme }: NavbarProps) => (
       </div>
 
       <div className="dropdown dropdown-end">
-        <label tabIndex={0} className="btn btn-circle btn-ghost m-1">
+        <label tabIndex={0} className="btn normal-case btn-ghost m-1">
           <FaAdjust />
+          <span className="mx-1">Theme</span>
+          <FaChevronDown />
         </label>
 
         <ul tabIndex={0} className="dropdown-content menu p-2 w-52">
@@ -98,6 +101,14 @@ const Navbar = ({ setTheme }: NavbarProps) => (
             </li>
           ))}
         </ul>
+      </div>
+
+      <div className="ml-8">
+        {importantSocialMediaLinks.map(({ Icon, url, name }) => (
+          <a href={url} target="_blank" className="btn btn-ghost" key={name}>
+            <Icon />
+          </a>
+        ))}
       </div>
     </div>
   </div>
