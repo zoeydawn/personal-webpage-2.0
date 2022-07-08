@@ -9,9 +9,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   // TODO: save theme to local storage
 
   return (
-    <div className="flex flex-col min-h-screen" data-theme={theme}>
+    <div
+      className="flex flex-col min-h-screen justify-between"
+      data-theme={theme}
+    >
       <Navbar setTheme={setTheme} />
-      <div className="">
+      <div className='pt-16'>
         <Component {...pageProps} />
       </div>
       <Footer />

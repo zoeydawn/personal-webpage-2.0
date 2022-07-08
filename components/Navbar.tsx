@@ -40,6 +40,7 @@ const menuItems = [
   { title: 'Experience', href: '/' },
   { title: 'Projects', href: '/' },
   { title: 'Contact', href: '/' },
+  { title: 'PGP Key', href: '/' },
   { title: 'Blog', href: '/' },
 ]
 
@@ -48,8 +49,9 @@ type NavbarProps = {
 }
 
 const Navbar = ({ setTheme }: NavbarProps) => (
-  <>
-    <div className="drawer absolute top-0 left-0 bottom-0">
+  <div>
+    <div className="drawer absolute top-0 left-0 bottom-0 w-80">
+      {/* <div className="drawer absolute top-0 left-0 bottom-0"> */}
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-side">
         <label htmlFor="my-drawer" className="drawer-overlay"></label>
@@ -98,7 +100,7 @@ const Navbar = ({ setTheme }: NavbarProps) => (
         </ul>
       </div>
     </div>
-  </>
+  </div>
 )
 
 export default Navbar
