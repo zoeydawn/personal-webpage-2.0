@@ -52,6 +52,14 @@ const Navbar = ({ setTheme }: NavbarProps) => (
         <a className="btn btn-ghost normal-case text-xl">{firstName}</a>
       </div>
 
+      <div className="mr-2">
+        {importantSocialMediaLinks.map(({ Icon, url, name }) => (
+          <a href={url} target="_blank" className="btn btn-ghost text-lg" key={name}>
+            <Icon />
+          </a>
+        ))}
+      </div>
+
       <div className="dropdown dropdown-end">
         <label tabIndex={0} className="btn normal-case btn-ghost m-1">
           <FaAdjust />
@@ -74,14 +82,6 @@ const Navbar = ({ setTheme }: NavbarProps) => (
             </li>
           ))}
         </ul>
-      </div>
-
-      <div className="ml-8">
-        {importantSocialMediaLinks.map(({ Icon, url, name }) => (
-          <a href={url} target="_blank" className="btn btn-ghost" key={name}>
-            <Icon />
-          </a>
-        ))}
       </div>
     </div>
   </div>
