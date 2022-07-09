@@ -1,12 +1,12 @@
 import Link from 'next/link'
 
 const menuItems = [
-  { title: 'About', href: '/' },
-  { title: 'Experience', href: '/' },
-  { title: 'Projects', href: '/' },
-  { title: 'Contact', href: '/' },
-  { title: 'PGP Key', href: '/' },
-  { title: 'Blog', href: '/' },
+  { title: 'About', href: '/about' },
+  { title: 'Experience', href: '/experience' },
+  { title: 'Projects', href: '/projects' },
+  { title: 'Contact', href: '/contact' },
+  // { title: 'PGP Key', href: '/' },
+  { title: 'Blog', href: '/blog' },
 ]
 
 function DrawarMenu({ children }: { children: any }) {

@@ -16,9 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         data-theme={theme}
       >
         <Navbar setTheme={setTheme} />
-        <div className="pt-16">
-          <Component {...pageProps} />
-        </div>
+        <Component {...pageProps} />
         <Footer />
       </div>
     </DrawarMenu>

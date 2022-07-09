@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { FaAdjust, FaChevronDown } from 'react-icons/fa'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { importantSocialMediaLinks, socialMediaLinks } from '../lib/links'
@@ -49,12 +50,19 @@ const Navbar = ({ setTheme }: NavbarProps) => (
       </div>
 
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">{firstName}</a>
+        <Link href="/">
+          <a className="btn btn-ghost normal-case text-xl">{firstName}</a>
+        </Link>
       </div>
 
       <div className="mr-2">
         {importantSocialMediaLinks.map(({ Icon, url, name }) => (
-          <a href={url} target="_blank" className="btn btn-ghost text-lg" key={name}>
+          <a
+            href={url}
+            target="_blank"
+            className="btn btn-ghost text-lg"
+            key={name}
+          >
             <Icon />
           </a>
         ))}
